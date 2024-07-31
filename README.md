@@ -1,0 +1,11 @@
+# Model Priming with Triplet Loss for Few-shot Emotion Classification in Text
+This repository contains the code to the paper "Model Priming with Triplet Loss for Few-Shot Emotion Classification in Text" presented at the ECAI 2024 conference.
+
+## Abstract
+Automatically detecting emotions in text is a challenging task, especially when only little supervised training data is available. Therefore, we attempt to boost model performance in few-shot experiments by learning emotion label information. We are the first to explore triplet loss for emotion detection from text, and utilize this technique to cluster text representations that express the same emotion in the embedding space before learning the classification task. We show that this method, which we call emotion priming, outperforms baseline results, multi-task fine-tuning, and an existing label infusion method that adds label words to the input sequence to alter the model’s attention weights. An analysis of the emotion class representations after priming shows that the observed performance gain can be attributed to the redistribution of the text representations. The results also indicate that this method is robust in datasets that contain many classes and few examples per class. In contrast to earlier work, we found that the label infusion method leads to a substantial performance decrease compared to the baseline model, especially for the datasets with more complex label schemes. Finally, we report zero-shot experiments with ChatGPT as a larger alternative to smaller fine-tuned language models, and show that it fails to produce accurate results, indicating the complexity of the studied task.
+
+## Installation
+Create an environment using ```conda create --name myenv python=3.9.17```, activate the environment, and install the dependencies with ```pip install -r requirements.txt```.
+
+## Overview
+Each of the main folders contains the experiments for each of the explored methodologies: A baseline, label infusion, multi-task learning, and emotion priming.
